@@ -160,7 +160,7 @@ variable "install_ssh" {
   type    = bool
   default = false
 }
-variable \"dynamodb_table_name\" {\n  type        = string\n  description = \"The name of the DynamoDB table\"\n  default     = \"example_table\"\n  nullable    = false\n}
+
 variable "dynamodb_table_name" {
   type        = string
   description = "The name of the DynamoDB table"
