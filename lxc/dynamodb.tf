@@ -1,1 +1,15 @@
-resource "aws_dynamodb_table" "example" {\n  name         = var.dynamodb_table_name\n  billing_mode = \"PAY_PER_REQUEST\"\n\n  attribute {\n    name = \"id\"\n    type = \"S\"\n  }\n\n  hash_key = \"id\"\n\n  tags = {\n    Name = var.dynamodb_table_name\n  }\n}
+resource "aws_dynamodb_table" "example" {
+  name         = var.dynamodb_table_name
+  billing_mode = "PAY_PER_REQUEST"
+
+  attribute {
+    name = "id"
+    type = "S"
+  }
+
+  hash_key = "id"
+
+  tags = {
+    Name = var.dynamodb_table_name
+  }
+}
