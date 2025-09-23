@@ -43,3 +43,30 @@ locals {
     tags       = "linux,rockylinux,9"
   }
 }
+module "my_vm" {
+  source = "github.com/rendler-denis/tf-proxmox-mod//lxc?ref=1.0.0"
+  ct_name      = "my-vm"
+  target       = "pve"
+  template     = "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
+  privileged   = false
+  onboot       = true
+  protected    = false
+  cpu_cores    = 4
+  memory       = 16384  # 16GB in MB
+  swap         = 512
+  vmid         = 100      # Ensure this ID is unique
+  state        = true
+  ssh_keys     = null
+  root_pass    = var.root_pass  # Ensure this is parameterized
+  tags         = "my-vm"
+  hdd_size     = "20G"  # Specify the desired HDD size
+  storage_name = "local-lvm"
+  net          = {
+    device  = "eth0"
+    name    = "vmbr1"
+    tag     = 0
+    macaddr = null
+    ip      = "dhcp"
+    gateway = null
+  }
+}
