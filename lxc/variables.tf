@@ -160,3 +160,30 @@ variable "install_ssh" {
   type    = bool
   default = false
 }
+variable "setup_postgres" {
+  type        = bool
+  description = "Boolean to determine if PostgreSQL should be set up in the container"
+  default     = false
+  nullable    = false
+}
+
+variable "db_name" {
+  type        = string
+  description = "The name of the PostgreSQL database to create"
+  default     = "mydatabase"
+  nullable    = false
+}
+
+variable "db_user" {
+  type        = string
+  description = "The PostgreSQL user to create"
+  default     = "dbuser"
+  nullable    = false
+}
+
+variable "db_password" {
+  type        = string
+  sensitive   = true
+  description = "The password for the PostgreSQL user"
+  nullable    = false
+}
