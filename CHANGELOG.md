@@ -2,7 +2,7 @@
 <a name="0.3.0">Release 0.3.0</a>
 ## [0.3.0](https://github.com/rendler-denis/tf-proxmox-mod/compare/0.2.0...0.3.0) (2025-01-19)
 
-### Features STASHED
+### Features STASHED 2
 
 * add vars to install ssh on demand
 
