@@ -1,7 +1,7 @@
 Copyright 2025-2030 Denis-Florin Rendler
 
 You are allowed to use this module for both private and commercial use as long as these
-LICENSE.md and README.md files are present.
+LICENSE.md and README.md files are present. STASHED
 
 Any derivative works MUST contain this LICENSE.md and any copyright notices.
 
